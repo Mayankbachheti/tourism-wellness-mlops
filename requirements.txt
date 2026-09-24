@@ -6,3 +6,4 @@ mlflow
 huggingface_hub
 joblib
 streamlit
+
