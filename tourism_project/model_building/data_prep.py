@@ -1,14 +1,10 @@
-# ------------------------------------------------------------------
-# Downloads the raw dataset from the Hugging Face Hub, cleans it,
-# splits it into train/test sets, and pushes the processed splits
-# back to the same dataset repository.
-# ------------------------------------------------------------------
+# Downloads the raw data, cleans it splits it into train and test data and uploads the processed data back to the same Hugging Face repository.
 import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from huggingface_hub import HfApi, hf_hub_download
 
-DATASET_REPO = "BigBachheti/tourism-wellness-dataset"  # <-- update with your HF username
+DATASET_REPO = "BigBachheti/tourism-wellness-dataset"
 
 def main():
     token = os.environ.get("HF_TOKEN")

@@ -1,12 +1,8 @@
-# ------------------------------------------------------------------
-# Registers the RAW tourism.csv as a versioned dataset on the
-# Hugging Face Hub, so every later pipeline stage reads from a single
-# traceable source instead of a local file.
-# ------------------------------------------------------------------
+# Register the raw tourism.csv to the Hugging Face Hub as a versioned dataset
 import os
 from huggingface_hub import HfApi, create_repo
 
-DATASET_REPO = "BigBachheti/tourism-wellness-dataset"  # <-- update with your HF username
+DATASET_REPO = "BigBachheti/tourism-wellness-dataset"
 LOCAL_FILE = "tourism_project/data/tourism.csv"
 
 def main():

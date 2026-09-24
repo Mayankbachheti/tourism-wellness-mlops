@@ -3,7 +3,7 @@ import streamlit as st
 from huggingface_hub import hf_hub_download
 import joblib
 
-MODEL_REPO = "BigBachheti/tourism-wellness-model"  # <-- update with your HF username
+MODEL_REPO = "BigBachheti/tourism-wellness-model"
 
 
 @st.cache_resource

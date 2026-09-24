@@ -1,9 +1,5 @@
-# ------------------------------------------------------------------
-# Downloads the processed train/test data from the Hugging Face Hub,
-# trains several candidate models inside an MLflow experiment,
-# hyperparameter-tunes the best one, and uploads the final pipeline
-# to a Hugging Face MODEL repository.
-# ------------------------------------------------------------------
+# Downloading the train and test data from Hugging Face,
+# trains different models using MLflow tunes the best model and uploads the final model to Hugging Face.
 import os
 import joblib
 import pandas as pd
@@ -21,8 +17,8 @@ from xgboost import XGBClassifier
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
-DATASET_REPO = "BigBachheti/tourism-wellness-dataset"  # <-- update with your HF username
-MODEL_REPO = "BigBachheti/tourism-wellness-model"      # <-- update with your HF username
+DATASET_REPO = "BigBachheti/tourism-wellness-dataset"
+MODEL_REPO = "BigBachheti/tourism-wellness-model"
 
 
 def load_data(token):
